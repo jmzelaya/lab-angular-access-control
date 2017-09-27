@@ -1,16 +1,23 @@
 <h2> Log Form </h2>
 
-<form (ngSubmit) = "logThang.addAccessItem(theLog)">
+<form (ngSubmit) = "logThang.addAccessItem(theLog)" novalidate>
   <label for="name-input">Name: </label>
-  <input id="name-input" type="text" placeholder="Bugs Bunny"
+  <input id="name-input" #myPersonInput = "ngModel" minlength="5" required type="text" placeholder="Bugs Bunny"
       name="contactName" [(ngModel)]= theLog.person/>
   <br />
 
   <label for="message-input">Message: </label>
-  <input id="message-input" type="text" placeholder="Hello, how are you?"
+  <input id="message-input" #myMessageInput = "ngModel" minlength="5" required type="text" placeholder="Hello, how are you?"
       name="contactMessage" [(ngModel)]= theLog.message />
   <br />
 
+
+<div *ngIf="myPersonInput.errors && myPersonInput.dirty">
+    <p class="error" *ngIf="myPersonInput.errors.required">
+        Please Input Your Name
+    </p>
+
+</div>
 
   <button> Add Log </button>
 

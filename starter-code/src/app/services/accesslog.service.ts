@@ -18,5 +18,6 @@ export class AccesslogService {
   addAccessItem(theLog: any) {
       this.logMessages.push(theLog)
       theLog["createdAt"] = new Date();
+      console.log(theLog)
     }
   }
