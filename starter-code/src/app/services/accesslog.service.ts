@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AccesslogService {
 
-  logMessages: any[] = []
+  logMessages: any[] = [];
+
+
 
   constructor() { }
 
@@ -11,6 +13,14 @@ export class AccesslogService {
 
   getAccessLog() {
     return this.logMessages;
+  }
+
+  addAccessItem(newPerson: string, newMessage: string) {
+    this.logMessages.push({
+      person: newPerson,
+      message: newMessage,
+      createdAt: new Date()
+    })
   }
 
 }

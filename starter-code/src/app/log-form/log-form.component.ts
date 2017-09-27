@@ -15,12 +15,6 @@ export class LogFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  addAccessItem(person, message) {
-    this.logThang.logMessages.push({
-      person: person,
-      message: message,
-      createdAt: new Date()
-    })
-  }
+
 
 }
