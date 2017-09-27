@@ -1,14 +1,14 @@
 <h2> Log Form </h2>
 
-<form (ngSubmit) = "addAccessItem()">
+<form (ngSubmit) = "logThang.addAccessItem(theLog)">
   <label for="name-input">Name: </label>
   <input id="name-input" type="text" placeholder="Bugs Bunny"
-      name="contactName" [(ngModel)]= logThang.newPerson/>
+      name="contactName" [(ngModel)]= theLog.person/>
   <br />
 
   <label for="message-input">Message: </label>
   <input id="message-input" type="text" placeholder="Hello, how are you?"
-      name="contactMessage" [(ngModel)]= logThang.newMessage />
+      name="contactMessage" [(ngModel)]= theLog.message />
   <br />
 
 

@@ -8,6 +8,8 @@ import { AccesslogService } from '../services/accesslog.service'
 })
 export class LogFormComponent implements OnInit {
 
+  theLog: any = {};
+
   constructor(
     private logThang: AccesslogService
   ) { }
@@ -15,6 +17,6 @@ export class LogFormComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  
 
 }

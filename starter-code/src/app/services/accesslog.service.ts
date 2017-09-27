@@ -15,12 +15,8 @@ export class AccesslogService {
     return this.logMessages;
   }
 
-  addAccessItem(newPerson: string, newMessage: string) {
-    this.logMessages.push({
-      person: newPerson,
-      message: newMessage,
-      createdAt: new Date()
-    })
+  addAccessItem(theLog: any) {
+      this.logMessages.push(theLog)
+      theLog["createdAt"] = new Date();
+    }
   }
-
-}
